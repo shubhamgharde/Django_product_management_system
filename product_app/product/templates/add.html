@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>index</title>
+    </head>
+    <body>
+            <button><a href="/index/">HOME</a></button>
+
+            {{result}} <br><br>
+            <form method="POST" action="/prod">
+                
+                {% csrf_token %}
+
+                <h3> Enter Details </h3>
+                <label>Product ID: </label>
+                <input type="text" name="id" value="{{ product.id }}"></input>
+                <br>
+                <label>Product Name:</label>
+                <input type="text" name="name" value="{{ product.name }}"></input>
+                <br>
+                <label>Product Brand:</label>
+                <input type="text" name="brand" value="{{ product.brand }}"></input>
+                <br>
+                <label>Product Price</label>
+                <input type="text" name="price" value="{{ product.price }}"></input>
+                <br>
+                <label>Product Category</label>
+                <input type="text" name="category" value="{{ product.category }}"></input>
+                <br>
+                <label>Product Vendor</label>
+                <input type="text" name="vendor" value="{{ product.vendor }}"></input>
+                <br>
+                <button type="Submit">Submit</button>
+            </form>
+    </body>
+</html>

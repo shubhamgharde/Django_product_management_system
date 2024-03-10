@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer</title>
+</head>
+<body>
+    <h1>Enter Customer Information</h1>
+    <button><a href="/index/">HOME</a></button>
+    
+    <form action="cust/" method="post">
+        
+        {% csrf_token %}
+        {{ result }} <br>
+        
+         Customer Id : <input type="text" name="id" value="{{customer.id}}" ><br><br>
+         Customer First Name : <input type="text" name="first_name" value="{{customer.first_name}}" ><br><br>
+         Customer Last Name : <input type="text" name="last_name" value="{{customer.last_name}}" ><br><br>
+         Customer Age : <input type="text" name="age" value="{{customer.age}}" ><br><br>
+         Customer Email : <input type="text" name="email" value="{{customer.email}}" ><br><br>
+         Customer Address : <input type="text" name="address" value="{{customer.address}}" ><br><br>
+         Customer Contact : <input type="text" name="contact" value="{{customer.contact}}" ><br><br>
+         <button><input type="submit"></button>
+
+    </form>
+</body>
+</html>

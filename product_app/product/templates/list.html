@@ -1,0 +1,48 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <title>Product Records</title>  
+</head>  
+<body>  
+
+        <h1>PRODUCT LIST</h1>
+        <button><a href="/index/">HOME</a></button> <br><br>
+        
+<table border="1">  
+    <thead>  
+    <tr>  
+        <th>Product ID</th>  
+        <th>Product Name</th>  
+        <th>Product Brand</th>  
+        <th>Product Price</th>  
+        <th>Product Category</th>  
+        <th>Product Vendor</th>  
+        <th>Product Created</th>  
+        <th>Product Updated</th>  
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+    {% for product in products %}  
+    <tr>  
+        <td>{{ product.id }}</td>  
+        <td>{{ product.name }}</td>  
+        <td>{{ product.brand }}</td>  
+        <td>{{ product.price }}</td>  
+        <td>{{ product.category }}</td>  
+        <td>{{ product.vendor }}</td>  
+        <td>{{ product.created }}</td>  
+        <td>{{ product.updated }}</td>  
+        <td>  
+            <a href="/update1/{{ product.id }}">Edit</a>  
+            <a href="/delete1/{{ product.id }}">Delete</a>  
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+<br>  
+<br>  
+<center><button><a href="/prod">Add New Record</a></button></center>  
+</body>  
+</html>
